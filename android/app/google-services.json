@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "172711540191",
+    "project_id": "duet-ai-roadshow-415022",
+    "storage_bucket": "duet-ai-roadshow-415022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172711540191:android:c1804ad9f891c90e3dc06a",
+        "android_client_info": {
+          "package_name": "dev.csaba.ecotrivia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172711540191-n4201acqebktd360rmff21dnr2dpn26h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.csaba.ecotrivia",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "172711540191-eafg96laeku0lsjbo1l9mmruj1u88a8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXcvDifW-A8SKmqE4-eXTBIKOAaEDt0ao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172711540191-eafg96laeku0lsjbo1l9mmruj1u88a8b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "172711540191-kmb0pj9fpq0lnh4ei5v0i45r1je9ri4b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.csaba.ecotrivia"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
