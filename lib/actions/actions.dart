@@ -86,6 +86,7 @@ Future retrieveAndShowHint(
         );
       },
     );
+
     FFAppState().update(() {});
   } else {
     return;
