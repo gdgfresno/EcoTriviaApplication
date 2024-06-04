@@ -49,7 +49,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
           Align(
             alignment: const AlignmentDirectional(0.0, -1.0),
             child: Image.asset(
-              'assets/images/Runway_Expanded_Gemini_Generated_wind_turbine_1.jpg',
+              'assets/images/Runway_Expand_Image~1280.jpg',
               width: double.infinity,
               height: 250.0,
               fit: BoxFit.cover,

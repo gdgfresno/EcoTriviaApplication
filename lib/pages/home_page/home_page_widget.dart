@@ -94,7 +94,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                 Align(
                   alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Image.asset(
-                    'assets/images/Runway_Expanded_Gemini_Generated_wind_turbine_2_2.jpg',
+                    'assets/images/Runway_Expand_Image~1280_masked.jpg',
                     width: double.infinity,
                     height: MediaQuery.sizeOf(context).height * 0.6,
                     fit: BoxFit.fitHeight,
@@ -105,11 +105,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
-                      'assets/images/Gemini_Generated_wind_turbine_wings_square.png',
+                      'assets/images/Runway_Expand_Image~Rotor_cut.png',
                       width: double.infinity,
-                      height: MediaQuery.sizeOf(context).height * 0.47,
+                      height: MediaQuery.sizeOf(context).height * 0.27,
                       fit: BoxFit.contain,
-                      alignment: const Alignment(0.0, 0.0),
+                      alignment: const Alignment(0.05, 0.0),
                     ),
                   ).animateOnPageLoad(
                       animationsMap['imageOnPageLoadAnimation']!),

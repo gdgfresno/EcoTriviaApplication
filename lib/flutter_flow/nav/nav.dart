@@ -299,7 +299,7 @@ class FFRoute {
               ? Container(
                   color: Colors.transparent,
                   child: Image.asset(
-                    'assets/images/Gemini_Generated_wind_turbine.jpeg',
+                    'assets/images/Runway_Expand_Image~Rotor_uncut.jpg',
                     fit: BoxFit.cover,
                   ),
                 )
