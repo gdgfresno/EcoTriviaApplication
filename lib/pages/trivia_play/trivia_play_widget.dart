@@ -46,12 +46,11 @@ class _TriviaPlayWidgetState extends State<TriviaPlayWidget> {
         _model.triviaDefinition = await actions.getTrivia(
           (_model.triviaDefString?.bodyText ?? ''),
         );
-        setState(() {
-          FFAppState().updateTriviaPlayStruct(
-            (e) => e..triviaDefinition = _model.triviaDefinition,
-          );
-          FFAppState().inTrivia = true;
-        });
+        FFAppState().updateTriviaPlayStruct(
+          (e) => e..triviaDefinition = _model.triviaDefinition,
+        );
+        FFAppState().inTrivia = true;
+        setState(() {});
       } else {
         _model.newSessionId = await actions.reinstateSessionId();
         if (_model.newSessionId != null && _model.newSessionId != '') {
@@ -67,12 +66,11 @@ class _TriviaPlayWidgetState extends State<TriviaPlayWidget> {
             _model.triviaDefinition2 = await actions.getTrivia(
               (_model.triviaDefString2?.bodyText ?? ''),
             );
-            setState(() {
-              FFAppState().updateTriviaPlayStruct(
-                (e) => e..triviaDefinition = _model.triviaDefinition2,
-              );
-              FFAppState().inTrivia = true;
-            });
+            FFAppState().updateTriviaPlayStruct(
+              (e) => e..triviaDefinition = _model.triviaDefinition2,
+            );
+            FFAppState().inTrivia = true;
+            setState(() {});
           } else {
             return;
           }
@@ -206,8 +204,13 @@ class _TriviaPlayWidgetState extends State<TriviaPlayWidget> {
                                             .triviaDefinition
                                             .choices
                                             .first
-                                            .choice,
+                                            .choice
+                                            .maybeHandleOverflow(
+                                              maxChars: 1024,
+                                              replacement: '…',
+                                            ),
                                         textAlign: TextAlign.start,
+                                        maxLines: 50,
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
@@ -254,8 +257,13 @@ class _TriviaPlayWidgetState extends State<TriviaPlayWidget> {
                                             .triviaPlay
                                             .triviaDefinition
                                             .choices[1]
-                                            .choice,
+                                            .choice
+                                            .maybeHandleOverflow(
+                                              maxChars: 1024,
+                                              replacement: '…',
+                                            ),
                                         textAlign: TextAlign.start,
+                                        maxLines: 50,
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
@@ -302,8 +310,13 @@ class _TriviaPlayWidgetState extends State<TriviaPlayWidget> {
                                             .triviaPlay
                                             .triviaDefinition
                                             .choices[2]
-                                            .choice,
+                                            .choice
+                                            .maybeHandleOverflow(
+                                              maxChars: 1024,
+                                              replacement: '…',
+                                            ),
                                         textAlign: TextAlign.start,
+                                        maxLines: 50,
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
@@ -350,8 +363,13 @@ class _TriviaPlayWidgetState extends State<TriviaPlayWidget> {
                                             .triviaPlay
                                             .triviaDefinition
                                             .choices[3]
-                                            .choice,
+                                            .choice
+                                            .maybeHandleOverflow(
+                                              maxChars: 1024,
+                                              replacement: '…',
+                                            ),
                                         textAlign: TextAlign.start,
+                                        maxLines: 50,
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
@@ -548,14 +566,17 @@ class _TriviaPlayWidgetState extends State<TriviaPlayWidget> {
                         ),
                       ),
                     if (FFAppState().inTrivia != true)
-                      SizedBox(
-                        width: 300.0,
-                        height: 300.0,
-                        child: RiveAnimation.asset(
-                          'assets/rive_animations/hexasphere_loading_animation.riv',
-                          artboard: 'Hexasphere Animation',
-                          fit: BoxFit.fill,
-                          controllers: _model.riveAnimationControllers,
+                      Align(
+                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        child: SizedBox(
+                          width: 300.0,
+                          height: 300.0,
+                          child: RiveAnimation.asset(
+                            'assets/rive_animations/hexasphere_loading_animation.riv',
+                            artboard: 'Hexasphere Animation',
+                            fit: BoxFit.contain,
+                            controllers: _model.riveAnimationControllers,
+                          ),
                         ),
                       ),
                   ],
