@@ -104,21 +104,24 @@ class _VictoryModalWidgetState extends State<VictoryModalWidget> {
                   color: FlutterFlowTheme.of(context).primaryBackground,
                 ),
                 Text(
-                  'You solved the trivia, gained XP and enhanced to the next level!',
+                  'You solved the trivia, gained XP, onto next level!',
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).labelLarge.override(
                         fontFamily: 'Plus Jakarta Sans',
                         letterSpacing: 0.0,
                       ),
                 ),
-                SizedBox(
-                  width: 488.0,
-                  height: 488.0,
-                  child: RiveAnimation.asset(
-                    'assets/rive_animations/fireworks_and_cake.riv',
-                    artboard: 'New Artboard',
-                    fit: BoxFit.cover,
-                    controllers: _model.riveAnimationControllers,
+                Align(
+                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  child: SizedBox(
+                    width: 488.0,
+                    height: 488.0,
+                    child: RiveAnimation.asset(
+                      'assets/rive_animations/fireworks_and_cake.riv',
+                      artboard: 'New Artboard',
+                      fit: BoxFit.contain,
+                      controllers: _model.riveAnimationControllers,
+                    ),
                   ),
                 ),
                 Padding(

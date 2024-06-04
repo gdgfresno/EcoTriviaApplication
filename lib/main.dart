@@ -137,6 +137,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'HomePage': const HomePageWidget(),
       'MyHistory': const MyHistoryWidget(),
+      'chat_ai_Screen': const ChatAiScreenWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -177,6 +178,18 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 26.0,
             ),
             label: 'Home',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.chat_outlined,
+              size: 24.0,
+            ),
+            activeIcon: Icon(
+              Icons.chat,
+              size: 24.0,
+            ),
+            label: 'Chat',
             tooltip: '',
           )
         ],

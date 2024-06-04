@@ -5,3 +5,5 @@ export '/pages/login_page/login_page_widget.dart' show LoginPageWidget;
 export '/pages/my_history/my_history_widget.dart' show MyHistoryWidget;
 export '/pages/create_account_page/create_account_page_widget.dart'
     show CreateAccountPageWidget;
+export '/pages/chat_ai_screen/chat_ai_screen_widget.dart'
+    show ChatAiScreenWidget;

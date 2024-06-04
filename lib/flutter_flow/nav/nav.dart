@@ -110,6 +110,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'CreateAccountPage',
           path: '/createAccountPage',
           builder: (context, params) => const CreateAccountPageWidget(),
+        ),
+        FFRoute(
+          name: 'chat_ai_Screen',
+          path: '/chatAiScreen',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'chat_ai_Screen')
+              : const ChatAiScreenWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

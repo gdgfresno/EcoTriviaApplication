@@ -7,5 +7,6 @@ abstract class FFAppConstants {
   static const String apiUrl =
       'https://us-central1-duet-ai-roadshow-415022.cloudfunctions.net/eco-trivia2';
   static const String prompt =
-      'Come up with a short trivia about sustainability';
+      'Come up with a new trivia about a detail of any sustainable development goal';
+  static const String chatAgentID = 'e476af80-04b5-4c09-b1ea-09c73cf12c93';
 }
