@@ -106,7 +106,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
                       'assets/images/Runway_Expand_Image~Rotor_cut.png',
-                      width: double.infinity,
                       height: MediaQuery.sizeOf(context).height * 0.27,
                       fit: BoxFit.contain,
                       alignment: const Alignment(0.05, 0.0),
