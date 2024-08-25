@@ -90,7 +90,7 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                             final child = Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).accent4,
+                                color: FlutterFlowTheme.of(context).alternate,
                                 borderRadius: BorderRadius.circular(12.0),
                                 border: Border.all(
                                   color: FlutterFlowTheme.of(context).alternate,
@@ -116,6 +116,7 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                                               child: EmptyList1Widget(),
                                             );
                                           }
+
                                           return ListView.builder(
                                             padding: const EdgeInsets.fromLTRB(
                                               0,
@@ -173,7 +174,7 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                                                                     BoxDecoration(
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .accent1,
+                                                                      .primaryBackground,
                                                                   borderRadius:
                                                                       const BorderRadius
                                                                           .only(
@@ -194,7 +195,7 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                                                                       .all(
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
-                                                                        .primary,
+                                                                        .tertiary,
                                                                     width: 2.0,
                                                                   ),
                                                                 ),
@@ -311,7 +312,7 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                                                                             child:
                                                                                 Icon(
                                                                               Icons.content_copy,
-                                                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                                                              color: FlutterFlowTheme.of(context).primaryText,
                                                                               size: 12.0,
                                                                             ),
                                                                           ),
@@ -326,6 +327,7 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                                                                               'Copy response',
                                                                               style: FlutterFlowTheme.of(context).labelSmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
+                                                                                    color: FlutterFlowTheme.of(context).primaryText,
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                             ),
@@ -392,7 +394,7 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                                                                   Border.all(
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .alternate,
+                                                                    .tertiary,
                                                               ),
                                                             ),
                                                             child: Padding(
@@ -522,7 +524,7 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                                   ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).alternate,
+                              color: FlutterFlowTheme.of(context).tertiary,
                               width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(12.0),
@@ -558,7 +560,7 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                         maxLines: 8,
                         minLines: 1,
                         keyboardType: TextInputType.multiline,
-                        cursorColor: FlutterFlowTheme.of(context).primary,
+                        cursorColor: FlutterFlowTheme.of(context).success,
                         validator:
                             _model.textControllerValidator.asValidator(context),
                       ),
@@ -572,7 +574,7 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                         buttonSize: 60.0,
                         icon: Icon(
                           Icons.send_rounded,
-                          color: FlutterFlowTheme.of(context).primary,
+                          color: FlutterFlowTheme.of(context).success,
                           size: 30.0,
                         ),
                         showLoadingIndicator: true,
@@ -592,6 +594,7 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                             locationID: FFAppConstants.locationID,
                             prompt: _model.textController.text,
                           );
+
                           if ((_model.chatGPTResponse?.succeeded ?? true)) {
                             _model.jsonifiedResponse =
                                 await actions.jsonifyResponse(

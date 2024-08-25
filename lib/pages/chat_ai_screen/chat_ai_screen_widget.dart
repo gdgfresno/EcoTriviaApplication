@@ -84,7 +84,7 @@ class _ChatAiScreenWidgetState extends State<ChatAiScreenWidget> {
                 width: double.infinity,
                 height: double.infinity,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).primaryBackground,
+                  color: FlutterFlowTheme.of(context).secondary,
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: Image.asset(

@@ -184,7 +184,7 @@ class _WritingIndicatorWidgetState extends State<WritingIndicatorWidget>
           color: FlutterFlowTheme.of(context).accent1,
           borderRadius: BorderRadius.circular(12.0),
           border: Border.all(
-            color: FlutterFlowTheme.of(context).primary,
+            color: FlutterFlowTheme.of(context).success,
           ),
         ),
         child: Padding(
@@ -197,7 +197,7 @@ class _WritingIndicatorWidgetState extends State<WritingIndicatorWidget>
                 width: 12.0,
                 height: 12.0,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).primary,
+                  color: FlutterFlowTheme.of(context).success,
                   shape: BoxShape.circle,
                 ),
               ).animateOnPageLoad(
@@ -206,7 +206,7 @@ class _WritingIndicatorWidgetState extends State<WritingIndicatorWidget>
                 width: 12.0,
                 height: 12.0,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).primary,
+                  color: FlutterFlowTheme.of(context).success,
                   shape: BoxShape.circle,
                 ),
               ).animateOnPageLoad(
@@ -215,7 +215,7 @@ class _WritingIndicatorWidgetState extends State<WritingIndicatorWidget>
                 width: 12.0,
                 height: 12.0,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).primary,
+                  color: FlutterFlowTheme.of(context).success,
                   shape: BoxShape.circle,
                 ),
               ).animateOnPageLoad(
