@@ -42,6 +42,7 @@ class _TriviaPlayWidgetState extends State<TriviaPlayWidget> {
         sessionID: FFAppState().sessionId,
         prompt: FFAppConstants.prompt,
       );
+
       if ((_model.triviaDefString?.succeeded ?? true)) {
         _model.triviaDefinition = await actions.getTrivia(
           (_model.triviaDefString?.bodyText ?? ''),
@@ -62,6 +63,7 @@ class _TriviaPlayWidgetState extends State<TriviaPlayWidget> {
             sessionID: _model.newSessionId,
             prompt: FFAppConstants.prompt,
           );
+
           if ((_model.triviaDefString2?.succeeded ?? true)) {
             _model.triviaDefinition2 = await actions.getTrivia(
               (_model.triviaDefString2?.bodyText ?? ''),

@@ -22,22 +22,29 @@ class TriviaDefinitionStruct extends FFFirebaseStruct {
   String? _question;
   String get question => _question ?? '';
   set question(String? val) => _question = val;
+
   bool hasQuestion() => _question != null;
 
   // "choices" field.
   List<TriviaChoiceStruct>? _choices;
   List<TriviaChoiceStruct> get choices => _choices ?? const [];
   set choices(List<TriviaChoiceStruct>? val) => _choices = val;
-  void updateChoices(Function(List<TriviaChoiceStruct>) updateFn) =>
-      updateFn(_choices ??= []);
+
+  void updateChoices(Function(List<TriviaChoiceStruct>) updateFn) {
+    updateFn(_choices ??= []);
+  }
+
   bool hasChoices() => _choices != null;
 
   // "hints" field.
   List<TriviaHintStruct>? _hints;
   List<TriviaHintStruct> get hints => _hints ?? const [];
   set hints(List<TriviaHintStruct>? val) => _hints = val;
-  void updateHints(Function(List<TriviaHintStruct>) updateFn) =>
-      updateFn(_hints ??= []);
+
+  void updateHints(Function(List<TriviaHintStruct>) updateFn) {
+    updateFn(_hints ??= []);
+  }
+
   bool hasHints() => _hints != null;
 
   static TriviaDefinitionStruct fromMap(Map<String, dynamic> data) =>
@@ -72,12 +79,12 @@ class TriviaDefinitionStruct extends FFFirebaseStruct {
         'choices': serializeParam(
           _choices,
           ParamType.DataStruct,
-          true,
+          isList: true,
         ),
         'hints': serializeParam(
           _hints,
           ParamType.DataStruct,
-          true,
+          isList: true,
         ),
       }.withoutNulls;
 

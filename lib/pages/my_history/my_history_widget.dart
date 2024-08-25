@@ -59,6 +59,7 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
           );
         }
         List<HistoryRecord> myHistoryHistoryRecordList = snapshot.data!;
+
         return Scaffold(
           key: scaffoldKey,
           backgroundColor: FlutterFlowTheme.of(context).secondary,
@@ -131,6 +132,7 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                       if (collection.isEmpty) {
                         return const EmptyListWidget();
                       }
+
                       return ListView.builder(
                         padding: EdgeInsets.zero,
                         scrollDirection: Axis.vertical,
@@ -161,7 +163,9 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                     ),
                                   );
                                 }
+
                                 final cardHistoryRecord = snapshot.data!;
+
                                 return Card(
                                   clipBehavior: Clip.antiAliasWithSaveLayer,
                                   color: Colors.white,

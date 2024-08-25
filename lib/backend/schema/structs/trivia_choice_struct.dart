@@ -3,9 +3,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '/backend/schema/util/firestore_util.dart';
-import '/backend/schema/util/schema_util.dart';
 
-import 'index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 class TriviaChoiceStruct extends FFFirebaseStruct {
@@ -21,12 +19,14 @@ class TriviaChoiceStruct extends FFFirebaseStruct {
   String? _choice;
   String get choice => _choice ?? '';
   set choice(String? val) => _choice = val;
+
   bool hasChoice() => _choice != null;
 
   // "correct" field.
   bool? _correct;
   bool get correct => _correct ?? false;
   set correct(bool? val) => _correct = val;
+
   bool hasCorrect() => _correct != null;
 
   static TriviaChoiceStruct fromMap(Map<String, dynamic> data) =>

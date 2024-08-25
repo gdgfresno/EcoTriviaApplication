@@ -25,31 +25,40 @@ class TriviaPlayStruct extends FFFirebaseStruct {
   TriviaDefinitionStruct get triviaDefinition =>
       _triviaDefinition ?? TriviaDefinitionStruct();
   set triviaDefinition(TriviaDefinitionStruct? val) => _triviaDefinition = val;
-  void updateTriviaDefinition(Function(TriviaDefinitionStruct) updateFn) =>
-      updateFn(_triviaDefinition ??= TriviaDefinitionStruct());
+
+  void updateTriviaDefinition(Function(TriviaDefinitionStruct) updateFn) {
+    updateFn(_triviaDefinition ??= TriviaDefinitionStruct());
+  }
+
   bool hasTriviaDefinition() => _triviaDefinition != null;
 
   // "tries" field.
   int? _tries;
   int get tries => _tries ?? 0;
   set tries(int? val) => _tries = val;
-  void incrementTries(int amount) => _tries = tries + amount;
+
+  void incrementTries(int amount) => tries = tries + amount;
+
   bool hasTries() => _tries != null;
 
   // "basic_hint_count" field.
   int? _basicHintCount;
   int get basicHintCount => _basicHintCount ?? 0;
   set basicHintCount(int? val) => _basicHintCount = val;
+
   void incrementBasicHintCount(int amount) =>
-      _basicHintCount = basicHintCount + amount;
+      basicHintCount = basicHintCount + amount;
+
   bool hasBasicHintCount() => _basicHintCount != null;
 
   // "advanced_hint_count" field.
   int? _advancedHintCount;
   int get advancedHintCount => _advancedHintCount ?? 0;
   set advancedHintCount(int? val) => _advancedHintCount = val;
+
   void incrementAdvancedHintCount(int amount) =>
-      _advancedHintCount = advancedHintCount + amount;
+      advancedHintCount = advancedHintCount + amount;
+
   bool hasAdvancedHintCount() => _advancedHintCount != null;
 
   static TriviaPlayStruct fromMap(Map<String, dynamic> data) =>

@@ -19,12 +19,14 @@ class TriviaHintStruct extends FFFirebaseStruct {
   String? _hint;
   String get hint => _hint ?? '';
   set hint(String? val) => _hint = val;
+
   bool hasHint() => _hint != null;
 
   // "hint_type" field.
   String? _hintType;
   String get hintType => _hintType ?? '';
   set hintType(String? val) => _hintType = val;
+
   bool hasHintType() => _hintType != null;
 
   static TriviaHintStruct fromMap(Map<String, dynamic> data) =>
